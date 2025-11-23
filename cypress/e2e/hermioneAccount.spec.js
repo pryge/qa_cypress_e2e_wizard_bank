@@ -3,7 +3,7 @@
 import { faker } from '@faker-js/faker';
 
 describe('Bank app', () => {
-  const user = 'Hermoine Granger';
+  const user = 'Hermione Granger';
   const accountNumber = '1001';
   const accountCurrency = 'Dollar';
 
@@ -29,7 +29,7 @@ describe('Bank app', () => {
         cy.assertAccountProperty('Balance', `${initialBalance + depositAmount}`);
         cy.assertSuccessMessage('Deposit Successful');
 
-        cy.makeWidthrawal(withdrawAmount);
+        cy.makeWithdrawal(withdrawAmount);
         cy.assertSuccessMessage('Transaction successful');
         cy.assertAccountProperty('Balance', `${balance}`);
 

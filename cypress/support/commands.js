@@ -55,7 +55,7 @@ Cypress.Commands.add('assertSuccessMessage', (message) => {
   cy.get('[ng-show="message"]').should('have.text', message);
 });
 
-Cypress.Commands.add('makeWidthrawal', (amount) => {
+Cypress.Commands.add('makeWithdrawal', (amount) => {
   cy.clickButton('withdrawl');
   cy.contains('[type="submit"]', 'Withdraw').should('be.visible');
   cy.get('[placeholder="amount"]').type(`${amount}`);
